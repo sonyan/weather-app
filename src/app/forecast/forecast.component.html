@@ -1,0 +1,14 @@
+<h1>Forecast for {{city}}, {{state}}</h1>
+
+<ul>
+  <li *ngFor="let forecast of forecasts">
+    <span>{{formatDate(forecast.date)}}</span>
+    <span class="codition">
+      <i class="fa fa-sun-o" aria-hidden="true" *ngIf="forecast.condition == Condition.Sunny"></i>
+      <i class="fa fa-cloud" aria-hidden="true" *ngIf="forecast.condition == Condition.Cloudy"></i>
+      <i class="fa fa-snowflake-o" aria-hidden="true" *ngIf="forecast.condition == Condition.Snow"></i>
+    </span>
+    <span class="high">High {{forecast.high}}</span>
+    <span class="low">Low {{forecast.low}}</span>
+  </li>
+</ul>

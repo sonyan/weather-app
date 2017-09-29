@@ -1,0 +1,15 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  main {
+    text-align: center;
+    display: inline-block;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+}

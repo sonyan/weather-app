@@ -1,0 +1,17 @@
+<main>
+  <h1>
+    Weather Service
+  </h1>
+
+  <p-autoComplete 
+  field="city"
+  [(ngModel)]="selectedLocation" 
+  [suggestions]="results" 
+  (completeMethod)="search($event)" 
+  (onSelect)="handleSelect($event)"
+  placeholder="e.g. Los Angeles, CA">
+    <ng-template let-location pTemplate="item">
+      <div>{{location.city}}, {{location.state}}</div>
+    </ng-template>
+  </p-autoComplete>
+</main>
